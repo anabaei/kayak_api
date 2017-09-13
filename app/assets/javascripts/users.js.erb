@@ -1,29 +1,6 @@
 
-const DOMAIN = 'https://api.infermedica.com/v2';
-const API_PATH = '/conditions';
-const App_key = '35804b47a103ebdc80ef21be1b1972be';
-const App_Id = 'f6aa03c4';
 
-function a(){
-  alert("val");
-  $.ajax({
-          url:'api/v1/symptoms',
-          type:'GET',
-          dataType:'json',
-          data:{
-              myparam1: "First Param value",
-              myparam2: "Second param value"
 
-          },
-          success:function(data){
-              return(data);
-          },
-          error:function(data){
-              alert("D");
-          }
-  });
-
-  ;}
 
   function b(){
 
@@ -35,24 +12,4 @@ function a(){
         }, body: JSON.stringify(x)
       }).then(res=> res.json())}
     );
-  }
-
-
-  //
-  // .then(() => {return "jkkljkjlkl"})
-  // .then((res) =>
-
-  // getAll: function () { ... }
-  // 👇 Property Method Shorthand. Syntax sugar for 👆
-  function check(attr) {
-    const headers = new Headers()
-    headers.append('Content-Type', 'application/json')
-    headers.append('App-Id', App_Id)
-    headers.append('App-Key', App_key)
-
-    return fetch(
-      `${DOMAIN}${API_PATH}`+'/'+attr,
-      // { headers: {'Content-Type': 'application/json', 'App-Id': App_Id, 'App-Key': App_key} }
-      {headers}
-    ).then(res => res.json()).then(res => window.open("localhost:3000//controller/create?mdate="+mdate+"&phone="+phone,"_self"));
   }
