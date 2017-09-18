@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   #
   # get 'users/create'
   root 'users#index'
-  # get 'users/show'
+
+  get 'results/index'
   resources :users, only: [:index, :new, :create]
   post 'users/doajax' => 'users#doajax'
 
