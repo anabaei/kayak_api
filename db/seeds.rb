@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Customer.create(email: "a@gmail.com", password: "123")
-puts "Created #{Customer.all.count} customers"
+#Customer.create(email: "a@gmail.com", password: "123")
+puts "There are #{User.all.count} Users"
