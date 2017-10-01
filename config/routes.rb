@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tokens/create'
+  resources :tokens, only: [:create]
   # get 'users/index'
   #
   # get 'users/new'
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
   get 'results/index'
   resources :users, only: [:index, :new, :create]
   post 'users/doajax' => 'users#doajax'
-
+  
   # namespace :api, defaults: { format: :json } do
   namespace :api do
     namespace :v1 do
