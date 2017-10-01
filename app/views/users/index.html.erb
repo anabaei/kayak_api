@@ -1,35 +1,38 @@
-<h1>Useur</h1>
-<p>Find me in </p>
+
+
 
 <script>
 function amir(event){
- console.log("DS");
-  event.preventDefault();
 
-
-      const formData = new FormData(event);
-      debugger;
       // onSubmit({
       //   title: formData.get('title'),
       //   body: formData.get('body')
       // });
-  create();
+    // b()
+    create();
 }
 </script>
 
 
-<button onclick="amir()">Generate SPA</button>
+<button onclick="start()">Generate Symptoms</button>
+
 
 <%= link_to "Symptoms", results_index_path  %>
 
 <%= form_for @name do |f| %>
   <div>
-    <%= f.label :name %>
     <%# f.text_field will generate an `input` html tag with proper
     `name` attribute which will be `question[title]` in this case. It will
     also set the value to the input field to whatever Question.new object has
     preset for that particular attribute (in this case title) %>
+    <%= f.label :first_name %>
     <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
   </div>
 
 
