@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   end
 
   def create
-     @user = User.new(params.require("user").permit(:first_name, :last_name, :email, :password))
+     @user = User.new(params.require("user").permit(:first_name, :last_name, :email, :password_digest))
      if @user.save
-       redirect_to root_path 
+       redirect_to root_path
      else
        render json: { error: @user.errors.full_messages }
      end
