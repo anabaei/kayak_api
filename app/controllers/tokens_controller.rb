@@ -1,7 +1,7 @@
 class TokensController < ApplicationController
   protect_from_forgery with: :null_session
   def create
-    
+
       # params = { ..., email: "js@winterfel.gov", password: "supersecret"}
       user = User.find_by(email: params[:email])
       if user&.authenticate(params[:password])
