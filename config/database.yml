@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Kaya_sap_production
-  username: Kaya_sap
+  database: Kaya_sap
+  username: Kaya
   password: <%= ENV['KAYA_SAP_DATABASE_PASSWORD'] %>
