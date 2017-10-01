@@ -11,7 +11,7 @@ function create(attr){
 
   function b(){
 
-    return fetch('https://api.infermedica.com/v9/symptoms', {method: 'GET', headers:{'App_key': '35804b47a103ebdc80ef21be1b1972be', 'App_Id': 'f6aa03c4' }}).then(res=> res.json())
+    return fetch('https://api.infermedica.com/v2/symptoms', {method: 'GET', headers:{'App_key': '35804b47a103ebdc80ef21be1b1972be', 'App_Id': 'f6aa03c4' }}).then(res=> res.json())
     .then((x) => {fetch('/api/v1/symptoms', {
         method: 'POST',
         headers: {
