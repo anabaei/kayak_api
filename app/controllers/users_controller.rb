@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
      @user = User.new(params.require("user").permit(:first_name, :last_name, :email, :password))
      if @user.save
-       render :ok
+       redirect_to root_path 
      else
        render json: { error: @user.errors.full_messages }
      end
