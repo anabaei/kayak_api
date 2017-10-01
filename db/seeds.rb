@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create first_name:'amir', last_name:'na', email:'a@gmail.com', password:'1234'
-puts "Created #{User.all.count} users"
+Customer.create(email: "a@gmail.com", password: "123")
+puts "Created #{Customer.all.count} customers"
